@@ -1,0 +1,24 @@
+﻿<s:TagVisualization
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="SurfaceFlickrSearch.TagVisualization1"
+    Loaded="TagVisualization1_Loaded" Height="250" Width="250">
+    <Grid>
+        <Rectangle RadiusY="10" RadiusX="10" Stroke="#FF878787" StrokeThickness="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFB151" Offset="0"/>
+                    <GradientStop Color="#FF915001" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Height="21" Margin="12,35,12,0" TextWrapping="Wrap" Text="Enter Search Criteria:" VerticalAlignment="Top"/>
+        <s:SurfaceTextBox Height="23" HorizontalAlignment="Left" Margin="12,55,0,0" x:Name="surfaceTextBox1" VerticalAlignment="Top" Width="226" />
+        <TextBlock Margin="12,108.333,12,120.667" TextWrapping="Wrap" Text="Number of Pictures to return"/>
+        <s:SurfaceTextBox Height="23" HorizontalAlignment="Left" Margin="12,0,0,83.666" x:Name="surfaceTextBox2" VerticalAlignment="Bottom" Width="226" Text="25" />
+        <s:SurfaceButton Content="Search" Height="23" HorizontalAlignment="Left" Margin="12,195,0,0" x:Name="surfaceButton1" VerticalAlignment="Top" Width="108" Click="surfaceButton1_Click" />
+        <s:SurfaceButton Content="Clear" Height="23" HorizontalAlignment="Left" Margin="132,195,0,0" x:Name="surfaceButton2" VerticalAlignment="Top" Width="106" Click="surfaceButton2_Click" />
+        <Image Margin="-34.046,-33,0,0" Source="Resources/snooping magnifying glass red.png" Stretch="Fill" HorizontalAlignment="Left" Width="100.328" Height="100" VerticalAlignment="Top"/>
+    </Grid>
+</s:TagVisualization>

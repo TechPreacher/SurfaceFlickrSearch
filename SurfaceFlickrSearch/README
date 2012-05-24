@@ -1,0 +1,7 @@
+﻿This project has been created for demo purposes by sascha@corti.com (@TechPreacher).
+
+SurfaceFlickrSearch is a simple Flickr Search Client for Microsoft Surface 2.0, demonstrating the capabilities of the Microsoft Surface 2.0 SDK.
+To run this application, you have to edit Settings.xml and provide a valid Flickr API key in the <FlickrApiKey></FlickrApiKey> element.
+To display the search GUI, you have to place the Byte Tag specified in Settings.xml on the Surface unit running the application.
+You can print your own Byte Tags by downloading them from: http://www.microsoft.com/en-us/download/details.aspx?id=11029
+You can also use the Surface Simulator on any computer to simulate placing a Byte Tag on the running application.

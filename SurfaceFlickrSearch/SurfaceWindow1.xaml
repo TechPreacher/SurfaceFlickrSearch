@@ -1,0 +1,43 @@
+﻿<s:SurfaceWindow x:Class="SurfaceFlickrSearch.SurfaceWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    Title="SurfaceFlickrSearch"
+    mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="1080" d:DesignWidth="1920"                 
+    >
+
+    <s:SurfaceWindow.Resources>
+        <ImageBrush x:Key="WindowBackground" Stretch="UniformToFill" Opacity="1" ImageSource="pack://application:,,,/Resources/WindowBackground.png"/>
+        <Storyboard x:Key="Animate">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </s:SurfaceWindow.Resources>
+
+	<s:SurfaceWindow.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+		</EventTrigger>
+	</s:SurfaceWindow.Triggers>
+
+    <Grid Background="{StaticResource WindowBackground}">
+
+        <Grid x:Name="grid" Margin="0" VerticalAlignment="Center" Height="200" Opacity="0">
+        	<Rectangle Fill="#7F000000" Stroke="Black"/>
+        	<TextBlock x:Name="tbError" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Error Text." VerticalAlignment="Center" Foreground="White" FontSize="32"/>
+        </Grid>
+
+        <s:TagVisualizer VisualizationAdded="TagVisualizer_VisualizationAdded" >
+            <s:TagVisualizer.Definitions>
+                <s:TagVisualizationDefinition x:Name="TagVisualizationDefinition1" OffsetOrigin="0,0" Source="TagVisualization1.xaml" />
+            </s:TagVisualizer.Definitions>
+        </s:TagVisualizer>
+
+        <s:ScatterView x:Name="scatterView1" />
+        
+    </Grid>
+</s:SurfaceWindow>
